@@ -1,16 +1,12 @@
-# proglama performans odevi
-# 9un cevabi
+# 9un cevabı
 aylar = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"]
-# ilk harfi büyük gir yoksa hata veriyor yani örnek temmuz değil Temmuz yazman gerek.
+secilen_ay = input("Hangi ayın mevsimini merak ediyon? ").capitalize() # Küçük girse de düzeltir
 
-secilen_ay = input("Hangi ayın mevsimini merak ediyon? ")
-
-indis = aylar.index(secilen_ay)
-
-kis = aylar[0:2]
-ilkbahar = aylar[2:5]
-yaz = aylar[5:8]
-sonbahar = aylar[8:11]
+# Mevsimleri doğru aralıklarla tanımlayalım
+kis = ["Aralık", "Ocak", "Şubat"]
+ilkbahar = aylar[2:5] # Mart, Nisan, Mayıs
+yaz = aylar[5:8]      # Haziran, Temmuz, Ağustos
+sonbahar = aylar[8:11] # Eylül, Ekim, Kasım
 
 if secilen_ay in kis:
     print("Mevsim: Kış")
@@ -21,63 +17,36 @@ elif secilen_ay in yaz:
 elif secilen_ay in sonbahar:
     print("Mevsim: Sonbahar")
 else:
-    print("Hatalı giriş!")
+    print("Hatalı giriş yaptın kanka!")
 
-
-
-
-# 29un cevabi
+# 29un cevabı
 fiyatlar = []
-eski_fiyat = float(input("Ürünün fiyatını giriniz:"))
+eski_fiyat = float(input("Ürünün fiyatını gir: "))
 fiyatlar.append(eski_fiyat)
 
 zam_orani = 0.20
-zamli_fiyat = fiyatlar[0] + (fiyatlar[0] * zam_orani)
-
+zamli_fiyat = fiyatlar[0] * 1.20 # %20 zam eklenmiş hali
 fiyatlar.append(zamli_fiyat)
 
 print("Eski Fiyat:", fiyatlar[0])
 print("Yeni Zamlı Fiyat:", fiyatlar[1])
 
-
-
-# 49un cevabi
-kelime = input("Hecelecek kelime: ")
-harf_listesi = list(kelime)
-
-for i in range(1, len(harf_listesi), 1):
-    harf_listesi.insert(i, "-")
-
-cikti = "".join(harf_listesi)
+# 49un cevabı
+kelime = input("Hecelecek kelimeyi yaz: ")
+cikti = "-".join(kelime) # En garantisi ve kısa yolu budur
 print("Sonuç:", cikti)
 
-
-
-# 69un cevabi
+# 69un cevabı
 sayilar = [10, 10, 5]
 toplam = 0
-
 while len(sayilar) > 0:
-    son_eleman = sayilar.pop()
-    toplam = toplam + son_eleman
+    toplam += sayilar.pop()
+print("Liste boşaldı, toplam:", toplam)
 
-print("Liste boşaldı, toplam da şu çıktı:", toplam)
-
-
-
-# 89un cevabi
+# 89un cevabı
 import time
-
-baslangic = int(input("Kaçtan geriye? "))
-liste = []
-
-
-for x in range(1, baslangic + 1):
-    liste.append(x)
-
-liste.reverse()
-
-for s in liste:
+baslangic = int(input("Kaçtan geriye sayalım? "))
+for s in range(baslangic, 0, -1): # Listeye gerek kalmadan direkt geri sayar
     print(s)
     time.sleep(0.5)
 print("Bitti!")
