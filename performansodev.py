@@ -1,6 +1,8 @@
 # 9un cevabı
 aylar = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"]
-secilen_ay = input("Hangi ayın mevsimini merak ediyorsun? ").capitalize() #kelimenin ilk harfini büyük yaz yoksa sanırım hata veriyor yani örnek: "Temmuz" , "temmuz" değil.
+secilen_ay = input("Hangi ayın mevsimini merak ediyorsun? ").capitalize() 
+# kelimenin ilk harfini büyük yaz yoksa sanırım hata veriyor yani örnek:
+# "Temmuz" , "temmuz" değil.
 
 kis = ["Aralık", "Ocak", "Şubat"]
 ilkbahar = aylar[2:5]
