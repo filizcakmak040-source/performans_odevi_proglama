@@ -50,4 +50,9 @@ baslangic = int(input("Kaçtan geriye sayılsın? "))
 for s in range(baslangic, 0, -1):
     print(s)
     time.sleep(0.5)
-print("Bitti!")
+print("Bitti")
+
+
+
+
+# bu gün...benim doğum günüm. 24 mayıs🧡2011
